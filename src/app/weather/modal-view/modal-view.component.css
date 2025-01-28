@@ -1,0 +1,118 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .weather-card {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .weather-card h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .weather-card .temperature {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .weather-card img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+  }
+  
+  .weather-card .additional-info {
+    margin-top: 20px;
+  }
+  
+  .weather-card .info {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #87CEFA;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .favorite-btn:hover {
+    background: none;
+  }
+  
+  .star-empty {
+    color: gray; /* Color de la estrella cuando no es favorita */
+  }
+  
+  .star-filled {
+    color: yellow; /* Color de la estrella cuando es favorita */
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .btn-close {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .btn-close:hover {
+    color: #ff6347; /* Color cuando se pasa el ratón */
+  }
+  
+  /* Añadimos espacio entre los botones */
+  .modal-header button {
+    margin: 0 5px;
+  }
+  
+  .modal-header .favorite-btn {
+    font-size: 24px; /* Tamaño del icono de favoritos */
+  }
+  
+  .modal-header .favorite-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  

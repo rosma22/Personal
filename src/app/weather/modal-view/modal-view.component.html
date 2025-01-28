@@ -1,0 +1,28 @@
+<div class="modal-overlay" *ngIf="isOpen" (click)="close()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+            <button class="btn-close" (click)="close()">×</button>
+            <button class="favorite-btn" (click)="toggleFavorite()">
+              <svg *ngIf="favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="yellow">
+                <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-6.91-.58L12 2 9.91 8.66 3 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <svg *ngIf="!favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="gray">
+                <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-6.91-.58L12 2 9.91 8.66 3 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+            </button>
+          </div>
+
+        <div class="weather-card">
+            <h1>{{weatherData?.location?.name}}</h1>
+            <div class="temperature">{{weatherData?.current?.temp_c}} °C / {{weatherData?.current?.temp_f}} °F</div>
+            <img src="{{weatherData?.current?.condition?.icon}}" alt="Weather Icon">
+            <p>{{weatherData?.current?.condition?.text}}</p>
+
+            <div class="additional-info">
+                <div class="info">Wind Speed: {{weatherData?.current?.wind_kph}} km/h</div>
+                <div class="info">Humidity: {{weatherData?.current?.humidity}}%</div>
+                <div class="info">Local Time: {{weatherData?.location?.localtime | date:'d MMMM y, h:mm a'}}</div>
+            </div>
+        </div>
+    </div>
+</div>

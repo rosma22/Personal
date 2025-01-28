@@ -1,0 +1,26 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  mat-paginator {
+    margin-top: 20px;
+  }
+
+  tr[mat-row]:hover {
+    cursor: pointer;
+    background: aliceblue;
+  }
+
+  tr[mat-header-row] {
+    font-weight: 700;
+  }

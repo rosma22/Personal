@@ -1,0 +1,42 @@
+/* Contenedor del menú */
+.menu {
+    background-color: #333; /* Fondo oscuro */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Fija el menú en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  /* Lista de elementos del menú */
+  .menu-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Centra los elementos */
+  }
+  
+  /* Elementos individuales del menú */
+  .menu-list li {
+    margin: 0 20px; /* Espacio entre los elementos */
+  }
+  
+  /* Estilos de los enlaces */
+  .menu-list a {
+    text-decoration: none;
+    color: white; /* Texto blanco */
+    font-weight: 500; /* Peso de fuente más ligero */
+    padding: 10px 15px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.3s; /* Efectos suaves */
+  }
+  
+  /* Efecto hover (cuando pasas el ratón sobre el enlace) */
+  .menu-list a:hover {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Texto blanco */
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+  }
+  

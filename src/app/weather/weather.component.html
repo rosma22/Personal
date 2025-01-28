@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+<app-modal-view [isOpen]="isModalOpen" (isOpenChange)="isModalOpen = $event" [weatherData]="weatherData"></app-modal-view>
+<app-alert></app-alert>
+<app-loading *ngIf="isLoading"></app-loading>
+
+<div class="form-container">
+    <h2>Consult Weather</h2>
+  
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="city">City</label>
+            
+            <ng-autocomplete 
+                formControlName="city"
+                [data]="cities"
+                [searchKeyword]="keyword"
+                placeholder="Select City"
+                (selected)='selectEvent($event)'
+                (inputChanged)='onChangeSearch($event)'
+                (inputFocused)='onFocused($event)'
+                [itemTemplate]="itemTemplate"
+                [notFoundTemplate]="notFoundTemplate">                                 
+            </ng-autocomplete>
+            
+            <ng-template #itemTemplate let-item>
+                <a [innerHTML]="item.name"></a>
+            </ng-template>
+            
+            <ng-template #notFoundTemplate let-notFound>
+                <div [innerHTML]="notFound"></div>
+            </ng-template>
+            
+        </div>
+      
+        <button mat-raised-button type="submit" [disabled]="form.invalid">Submit</button>
+      </form>
+</div>
+<router-outlet></router-outlet>
